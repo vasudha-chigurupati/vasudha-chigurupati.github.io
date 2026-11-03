@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vasudha Chigurupati, CCDM® | Clinical Data Manager</title>
+  <meta name="description" content="Vasudha Chigurupati, CCDM® – Oncology Clinical Data Manager at Labcorp with nearly 10 years of end-to-end clinical data management across 35+ Phase I–IV and medical device studies.">
+  <meta name="author" content="Vasudha Chigurupati">
+  <link rel="canonical" href="https://vasudha-chigurupati.github.io/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Vasudha Chigurupati, CCDM® | Clinical Data Manager">
+  <meta property="og:description" content="Oncology Clinical Data Manager at Labcorp. EDC database build, external data integration and inspection-ready study data across 35+ studies.">
+  <meta property="og:url" content="https://vasudha-chigurupati.github.io/">
+  <meta property="og:image" content="https://vasudha-chigurupati.github.io/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F7F5F1;
+      --paper: #FFFFFF;
+      --ink: #15233A;
+      --navy: #1F3A5F;
+      --navy-deep: #152B47;
+      --teal: #2C7A78;
+      --teal-soft: #E3F0EF;
+      --muted: #5A6577;
+      --line: #E4DFD7;
+      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --radius: 14px;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 6px; }
+
+    /* Nav */
+    header.nav { position: sticky; top: 0; z-index: 10; background: rgba(247,245,241,.88); backdrop-filter: saturate(140%) blur(10px); border-bottom: 1px solid transparent; transition: border-color .2s; }
+    header.nav.scrolled { border-bottom-color: var(--line); }
+    .nav-in { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .brand { font-family: var(--serif); font-weight: 600; font-size: 19px; text-decoration: none; letter-spacing: .2px; }
+    .brand span { color: var(--teal); }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { text-decoration: none; font-size: 14.5px; font-weight: 500; color: var(--muted); }
+    .nav-links a:hover { color: var(--ink); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 999px; font: 600 14.5px/1 var(--sans); text-decoration: none; border: 1.5px solid var(--navy); transition: transform .15s, background .15s, color .15s; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-solid { background: var(--navy); color: #fff; }
+    .btn-solid:hover { background: var(--navy-deep); }
+    .btn-ghost { color: var(--navy); background: transparent; }
+    .btn-ghost:hover { background: var(--navy); color: #fff; }
+    .nav-links .btn { color: #fff; padding: 9px 16px; }
+    .btn svg { width: 16px; height: 16px; flex: none; }
+
+    /* Hero */
+    .hero { padding: 72px 0 84px; }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr .9fr; gap: 64px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--teal); }
+    h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(40px, 5.6vw, 64px); line-height: 1.05; margin: 18px 0 8px; letter-spacing: -.5px; }
+    .cred { font-family: var(--serif); font-size: clamp(18px, 2vw, 22px); color: var(--navy); margin: 0 0 22px; font-weight: 500; }
+    .lede { font-size: 18px; color: var(--muted); max-width: 560px; margin: 0 0 32px; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .auth { margin-top: 26px; font-size: 14px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+    .auth svg { width: 18px; height: 18px; color: var(--teal); }
+    .portrait { position: relative; justify-self: center; width: min(400px, 100%); }
+    .portrait::before { content: ""; position: absolute; inset: 22px -22px -22px 22px; background: var(--navy); border-radius: 22px; }
+    .portrait::after { content: ""; position: absolute; width: 120px; height: 120px; top: -26px; left: -26px; background-image: radial-gradient(var(--teal) 1.6px, transparent 1.7px); background-size: 14px 14px; opacity: .55; }
+    .portrait img { position: relative; z-index: 1; border-radius: 22px; aspect-ratio: 4 / 5; object-fit: cover; width: 100%; height: auto; box-shadow: 0 20px 50px rgba(21,35,58,.18); }
+
+    /* Stats */
+    .stats { background: var(--navy); color: #fff; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat { padding: 34px 24px; border-left: 1px solid rgba(255,255,255,.14); }
+    .stat:first-child { border-left: 0; }
+    .stat b { display: block; font-family: var(--serif); font-size: 42px; font-weight: 600; line-height: 1.1; }
+    .stat span { font-size: 14px; color: #C9D5E4; }
+
+    /* Sections */
+    section.block { padding: 88px 0; }
+    section.alt { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .sec-head { display: grid; grid-template-columns: 280px 1fr; gap: 48px; margin-bottom: 40px; }
+    .sec-label { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin: 0 0 8px; }
+    h2 { font-family: var(--serif); font-weight: 600; font-size: clamp(28px, 3.4vw, 38px); line-height: 1.15; margin: 0; letter-spacing: -.3px; }
+    .about-body p { margin: 0 0 18px; font-size: 17.5px; color: #2D3A4F; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .chip { background: var(--teal-soft); color: #1E5A58; font-size: 14px; font-weight: 600; padding: 7px 14px; border-radius: 999px; }
+
+    /* Timeline */
+    .timeline { position: relative; margin-left: 280px; padding-left: 48px; }
+    .timeline::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+    .role { position: relative; padding-bottom: 44px; }
+    .role:last-child { padding-bottom: 0; }
+    .role::before { content: ""; position: absolute; left: -55px; top: 7px; width: 16px; height: 16px; border-radius: 50%; background: var(--paper); border: 3px solid var(--teal); }
+    .role.current::before { background: var(--teal); box-shadow: 0 0 0 6px var(--teal-soft); }
+    .when { position: absolute; left: -330px; width: 250px; text-align: right; top: 2px; font-size: 14px; font-weight: 600; color: var(--muted); }
+    .role h3 { font-family: var(--serif); font-size: 22px; font-weight: 600; margin: 0; line-height: 1.3; }
+    .org { font-weight: 600; color: var(--navy); margin: 2px 0 2px; }
+    .meta { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
+    .role ul { margin: 0; padding-left: 18px; }
+    .role li { margin: 0 0 7px; color: #2D3A4F; }
+    .role li::marker { color: var(--teal); }
+    .early { margin: 36px 0 0 280px; padding-left: 48px; font-size: 15px; color: var(--muted); }
+    .early b { color: var(--ink); font-weight: 600; }
+
+    /* Expertise */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px; transition: box-shadow .2s, transform .2s; }
+    section.alt .card { background: var(--bg); }
+    .card:hover { box-shadow: 0 14px 34px rgba(21,35,58,.08); transform: translateY(-2px); }
+    .ico { width: 44px; height: 44px; border-radius: 12px; background: var(--navy); color: #fff; display: grid; place-items: center; margin-bottom: 16px; }
+    .ico svg { width: 22px; height: 22px; }
+    .card h3 { font-size: 17px; margin: 0 0 8px; font-weight: 700; }
+    .card p { margin: 0; font-size: 15px; color: var(--muted); }
+
+    /* Credentials */
+    .creds { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .cred-card { display: flex; gap: 18px; align-items: flex-start; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+    .badge { flex: none; width: 58px; height: 58px; border-radius: 50%; background: var(--teal); color: #fff; display: grid; place-items: center; font: 700 13px/1 var(--sans); letter-spacing: .04em; }
+    .badge.navy { background: var(--navy); }
+    .cred-card h3 { margin: 0 0 4px; font-size: 18px; }
+    .cred-card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    /* Contact */
+    .contact { background: var(--navy-deep); color: #fff; padding: 88px 0; }
+    .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
+    .contact h2 { color: #fff; }
+    .contact p { color: #C9D5E4; font-size: 17.5px; margin: 14px 0 0; max-width: 520px; }
+    .contact .sec-label { color: #7CC4C1; }
+    .links { display: grid; gap: 14px; }
+    .link-row { display: flex; align-items: center; gap: 16px; padding: 18px 20px; border-radius: var(--radius); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); text-decoration: none; transition: background .15s; }
+    .link-row:hover { background: rgba(255,255,255,.12); }
+    .link-row svg { width: 22px; height: 22px; color: #7CC4C1; flex: none; }
+    .link-row small { display: block; color: #9FB2C8; font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; }
+    .link-row strong { font-weight: 600; font-size: 16px; word-break: break-all; }
+    footer { background: var(--navy-deep); color: #8FA3BA; font-size: 13.5px; border-top: 1px solid rgba(255,255,255,.1); }
+    footer .wrap { display: flex; justify-content: space-between; gap: 16px; padding-top: 22px; padding-bottom: 22px; flex-wrap: wrap; }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 56px; }
+      .portrait { width: min(340px, 85%); order: -1; }
+      .sec-head { grid-template-columns: 1fr; gap: 14px; }
+      .timeline { margin-left: 8px; padding-left: 36px; }
+      .role::before { left: -43px; }
+      .when { position: static; width: auto; text-align: left; display: block; margin-bottom: 4px; color: var(--teal); }
+      .early { margin-left: 8px; padding-left: 36px; }
+      .cards { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .stat:nth-child(3) { border-left: 0; }
+      .stat:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.14); }
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 0 16px; }
+      .nav-links a:not(.btn) { display: none; }
+      .hero { padding: 40px 0 64px; }
+      .cards, .creds { grid-template-columns: 1fr; }
+      section.block, .contact { padding: 64px 0; }
+      .stat { padding: 24px 16px; }
+      .stat b { font-size: 32px; }
+      .portrait::before { inset: 14px -14px -14px 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">Vasudha Chigurupati<span>.</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-solid" href="Vasudha_Chigurupati_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Oncology Clinical Data Manager · Labcorp</div>
+        <h1>Vasudha Chigurupati</h1>
+        <p class="cred">Certified Clinical Data Manager (CCDM®)</p>
+        <p class="lede">Nearly 10 years turning complex clinical trial data into clean, inspection-ready databases, from EDC build and external data integration through database lock and closeout.</p>
+        <div class="cta">
+          <a class="btn btn-solid" href="https://www.linkedin.com/in/vchiguru/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn btn-ghost" href="Vasudha_Chigurupati_Resume.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Download résumé
+          </a>
+          <a class="btn btn-ghost" href="mailto:vasu.chiguru@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Email
+          </a>
+        </div>
+        <p class="auth">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          Authorized to work in the U.S. · No sponsorship required
+        </p>
+      </div>
+      <div class="portrait">
+        <img src="headshot.jpg" width="720" height="900" alt="Portrait of Vasudha Chigurupati">
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Career highlights">
+    <div class="wrap stats-grid">
+      <div class="stat"><b>~10 yrs</b><span>Clinical data management</span></div>
+      <div class="stat"><b>35+</b><span>Phase I–IV &amp; medical device studies</span></div>
+      <div class="stat"><b>20+</b><span>Global sites supported</span></div>
+      <div class="stat"><b>0</b><span>Critical findings across 3 FDA inspections</span></div>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap sec-head">
+      <div>
+        <p class="sec-label">About</p>
+        <h2>Data you can lock with confidence.</h2>
+      </div>
+      <div class="about-body">
+        <p>I'm a Certified Clinical Data Manager (CCDM®) with end-to-end experience across 35+ Phase I–IV clinical trials and medical device studies. Today I lead data management for oncology evidence-generation studies at Labcorp, where I build complete study databases in Captivate EDC and serve as the main point of contact between sponsors, laboratories and research teams.</p>
+        <p>Before Labcorp, I spent over four years at Fred Hutchinson Cancer Center (SCHARP) on global HIV and COVID-19 studies, specializing in data transfer specifications, external data integration and vendor oversight. I care about clean builds, clear documentation and on-time database locks that hold up under inspection.</p>
+        <div class="chips" aria-label="Therapeutic areas">
+          <span class="chip">Oncology</span><span class="chip">Medical Devices</span><span class="chip">HIV</span><span class="chip">COVID-19</span><span class="chip">Endocrinology (Diabetes)</span><span class="chip">Cardiovascular</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="sec-label">Experience</p>
+          <h2>Career</h2>
+        </div>
+        <div></div>
+      </div>
+
+      <div class="timeline">
+        <article class="role current">
+          <span class="when">Sep 2025 – Present</span>
+          <h3>Oncology Clinical Data Manager</h3>
+          <div class="org">Labcorp Oncology</div>
+          <div class="meta">Medical Evidence Generation · Oncology and medical device studies</div>
+          <ul>
+            <li>Operational data lead for evidence-generation studies, owning data management from study build through closeout.</li>
+            <li>Sole database developer in Captivate EDC: all eCRFs, edit checks, rules and conditional logic.</li>
+            <li>Defines clinical data transfer requirements and integrates external data into internal systems for research and analysis.</li>
+            <li>Key liaison between sponsors and laboratories for query resolution; delivers dashboards and analytical reports to medical and research teams.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <span class="when">Aug 2022 – Jul 2025</span>
+          <h3>Clinical Data Manager</h3>
+          <div class="org">Fred Hutchinson Cancer Center · SCHARP</div>
+          <div class="meta">Seattle, WA · HIV, COVID-19, Oncology</div>
+          <ul>
+            <li>Led DTS authoring and maintenance for 12+ global Phase I–IV studies, raising first-pass vendor acceptance by 40%.</li>
+            <li>Directed oversight of 5 CROs and multiple data providers with 100% on-time delivery.</li>
+            <li>Cut manual reconciliation by 80% and data availability from 5 days to under 24 hours by mapping DTS to Rave and Medrio builds.</li>
+            <li>Zero critical findings across 3 FDA inspections; authored DMPs, DVPs and templates adopted department-wide.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <span class="when">Mar 2021 – Aug 2022</span>
+          <h3>Senior Clinical Data Coordinator</h3>
+          <div class="org">Fred Hutchinson Cancer Center · SCHARP</div>
+          <div class="meta">Seattle, WA · HIV, COVID-19</div>
+          <ul>
+            <li>Led data operations for 10+ multi-site trials across 20+ global sites, achieving 99%+ data completeness.</li>
+            <li>Co-authored 15+ CDASH-compliant CRFs and 100+ edit checks; ran UAT for 5 builds with zero post-deployment failures.</li>
+            <li>Mentored 5 Clinical Data Coordinators and served as SME for eCOA/ePRO integration and safety reconciliation.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <span class="when">Mar 2016 – Jul 2020</span>
+          <h3>Senior Clinical Data Coordinator <span style="font-weight:500;color:var(--muted)">(2019–2020)</span><br>Clinical Data Coordinator <span style="font-weight:500;color:var(--muted)">(2016–2019)</span></h3>
+          <div class="org">American Science Labs</div>
+          <div class="meta">Endocrinology (Diabetes), Cardiovascular</div>
+          <ul>
+            <li>Supported eCRF design, edit-check review and UAT, including three Phase III programs.</li>
+            <li>Performed SAE, lab and external vendor data reconciliation with pharmacovigilance and CRO partners.</li>
+            <li>Closed 1,000+ EDC queries at a 3-day median turnaround; authored DMP sections and eCRF guidelines adopted program-wide.</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="early"><b>Earlier:</b> Microbiologist, Hayagreeva Bio Organics, India (2015–2016) · Intern, DuPont, Hyderabad, India (2014–2015)</p>
+    </div>
+  </section>
+
+  <section class="block" id="expertise">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="sec-label">Expertise</p>
+          <h2>What I bring to a study team</h2>
+        </div>
+        <div></div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+          <h3>EDC build &amp; systems</h3>
+          <p>Full database builds in Captivate EDC; advanced Medidata Rave and Medrio; REDCap, ClinSpark, Oracle Clinical, Veeva Vault.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l4 4-4 4"/><path d="M3 7h18"/><path d="M7 21l-4-4 4-4"/><path d="M21 17H3"/></svg></div>
+          <h3>External data &amp; DTS</h3>
+          <p>Data transfer specifications and integration of lab, eCOA/ePRO and IRT data; reconciliation that holds up at lock.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+          <h3>Study design &amp; documentation</h3>
+          <p>CDASH-compliant eCRFs, edit-check specifications, UAT, DMPs, DVPs and eCRF completion guidelines.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Standards &amp; compliance</h3>
+          <p>CDISC (CDASH, SDTM), ICH-GCP, 21 CFR Part 11, TMF and FDA/EMA inspection readiness.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+          <h3>Coding, reporting &amp; analytics</h3>
+          <p>MedDRA and WHODrug coding; SAS, SQL, Tableau, J-Review; dashboards and KPI reporting.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.4 3.3-5.5 6.5-5.5s5.7 2.1 6.5 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14.6c2.4.3 4 2 4.5 4.9"/></svg></div>
+          <h3>Vendor &amp; stakeholder leadership</h3>
+          <p>Liaison for sponsors, CROs, labs and global sites; vendor oversight with KPIs; mentoring and training.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="credentials">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="sec-label">Credentials</p>
+          <h2>Certification &amp; education</h2>
+        </div>
+        <div></div>
+      </div>
+      <div class="creds">
+        <div class="cred-card">
+          <div class="badge">CCDM</div>
+          <div>
+            <h3>Certified Clinical Data Manager (CCDM®)</h3>
+            <p>Society for Clinical Data Management (SCDM) · 2025</p>
+          </div>
+        </div>
+        <div class="cred-card">
+          <div class="badge navy">M.Tech</div>
+          <div>
+            <h3>Master of Technology, Biotechnology</h3>
+            <p>Jawaharlal Nehru Technological University (JNTU) Kakinada, India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="sec-label">Contact</p>
+      <h2>Let's talk about your next study.</h2>
+      <p>The quickest way to reach me is by email or LinkedIn.</p>
+    </div>
+    <div class="links">
+      <a class="link-row" href="mailto:vasu.chiguru@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <span><small>Email</small><strong>vasu.chiguru@gmail.com</strong></span>
+      </a>
+      <a class="link-row" href="https://www.linkedin.com/in/vchiguru/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <span><small>LinkedIn</small><strong>linkedin.com/in/vchiguru</strong></span>
+      </a>
+      <a class="link-row" href="Vasudha_Chigurupati_Resume.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        <span><small>Résumé</small><strong>Download PDF</strong></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Vasudha Chigurupati</span>
+    <a href="#top" style="text-decoration:none">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const nav = document.querySelector('header.nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+</script>
+</body>
+</html>
