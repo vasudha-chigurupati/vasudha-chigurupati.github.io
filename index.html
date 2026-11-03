@@ -120,6 +120,35 @@
     .card h3 { font-size: 17px; margin: 0 0 8px; font-weight: 700; }
     .card p { margin: 0; font-size: 15px; color: var(--muted); }
 
+    /* Expertise cards: click for examples */
+    .sec-note { align-self: end; margin: 0; color: var(--muted); font-size: 16px; }
+    .card { position: relative; display: flex; flex-direction: column; cursor: pointer; }
+    .card > p { flex: 1; }
+    .more { all: unset; margin-top: 18px; display: inline-flex; align-items: center; gap: 6px; font: 600 14.5px/1.2 var(--sans); color: var(--teal); cursor: pointer; }
+    .more::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+    .more svg { width: 16px; height: 16px; transition: transform .15s; }
+    .card:hover .more svg { transform: translateX(3px); }
+    .more:focus-visible::after { outline: 3px solid var(--teal); outline-offset: 2px; }
+    dialog.ex-dlg { border: 0; padding: 0; border-radius: 18px; width: min(640px, calc(100% - 32px)); max-height: calc(100vh - 64px); overflow: auto; box-shadow: 0 30px 80px rgba(21,35,58,.35); color: var(--ink); background: var(--paper); }
+    dialog.ex-dlg::backdrop { background: rgba(21,35,58,.55); backdrop-filter: blur(3px); }
+    .dlg-in { padding: 28px 28px 22px; }
+    .dlg-head { display: flex; align-items: center; gap: 14px; }
+    .dlg-head .ico { margin: 0; flex: none; }
+    .dlg-head h3 { margin: 0; flex: 1; font-family: var(--serif); font-size: 24px; font-weight: 600; line-height: 1.2; }
+    .dlg-sub { margin: 6px 0 6px 58px; color: var(--muted); font-size: 14px; }
+    .x { all: unset; flex: none; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; color: var(--muted); font-size: 26px; line-height: 1; }
+    .x:hover { background: var(--bg); color: var(--ink); }
+    .x:focus-visible { outline: 3px solid var(--teal); }
+    .dlg-body ul { list-style: none; margin: 10px 0 0; padding: 0; }
+    .dlg-body li { padding: 14px 0; border-top: 1px solid var(--line); color: #2D3A4F; font-size: 15.5px; line-height: 1.6; }
+    .dlg-body li > span:last-child { display: block; }
+    .tag { display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; margin-bottom: 6px; }
+    .tag.lab { background: var(--teal-soft); color: #1E5A58; }
+    .tag.fh { background: #E6ECF4; color: var(--navy); }
+    .tag.asl { background: #F3EBDD; color: #7A5B2E; }
+    .tag.cert { background: #EFE7F3; color: #5B3F73; }
+    @media (max-width: 640px) { .dlg-in { padding: 22px 18px 16px; } .dlg-sub { margin-left: 0; } .dlg-head h3 { font-size: 21px; } }
+
     /* Credentials */
     .creds { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .cred-card { display: flex; gap: 18px; align-items: flex-start; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
@@ -329,38 +358,79 @@
           <p class="sec-label">Expertise</p>
           <h2>What I bring to a study team</h2>
         </div>
-        <div></div>
+        <p class="sec-note">Select a card to see where I've put each skill to work.</p>
       </div>
       <div class="cards">
         <div class="card">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
           <h3>EDC build &amp; systems</h3>
           <p>Full database builds in Captivate EDC; advanced Medidata Rave and Medrio; REDCap, ClinSpark, Oracle Clinical, Veeva Vault.</p>
+          <button class="more" type="button" aria-haspopup="dialog">See examples <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <div class="ex" hidden><ul>
+            <li><span class="tag lab">Labcorp</span><span>Sole database developer in Captivate EDC, building every eCRF, edit check, rule and conditional logic; configures REDCap for data capture.</span></li>
+            <li><span class="tag fh">Fred Hutch</span><span>Mapped data transfer specifications to Medidata Rave and Medrio builds, and managed queries across Rave, Medrio and REDCap.</span></li>
+            <li><span class="tag fh">Fred Hutch</span><span>Ran UAT for 5 database builds with zero post-deployment failures.</span></li>
+            <li><span class="tag asl">American Science Labs</span><span>Supported eCRF layout, edit-check review and UAT for three Phase III programs.</span></li>
+          </ul></div>
         </div>
         <div class="card">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l4 4-4 4"/><path d="M3 7h18"/><path d="M7 21l-4-4 4-4"/><path d="M21 17H3"/></svg></div>
           <h3>External data &amp; DTS</h3>
           <p>Data transfer specifications and integration of lab, eCOA/ePRO and IRT data; reconciliation that holds up at lock.</p>
+          <button class="more" type="button" aria-haspopup="dialog">See examples <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <div class="ex" hidden><ul>
+            <li><span class="tag lab">Labcorp</span><span>Develops and documents clinical data transfer requirements, and integrates external clinical data into internal systems for research and analysis.</span></li>
+            <li><span class="tag fh">Fred Hutch</span><span>Led DTS authoring and maintenance for 12+ global Phase I–IV studies, aligning lab, eCOA and IRT data with CDISC SDTM; first-pass vendor acceptance rose 40%.</span></li>
+            <li><span class="tag fh">Fred Hutch</span><span>Cut manual reconciliation by 80% and brought data availability from 5 days to under 24 hours.</span></li>
+            <li><span class="tag fh">Fred Hutch</span><span>Processed mid-study DTS change requests for protocol amendments while holding database lock timelines.</span></li>
+          </ul></div>
         </div>
         <div class="card">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
           <h3>Study design &amp; documentation</h3>
           <p>CDASH-compliant eCRFs, edit-check specifications, UAT, DMPs, DVPs and eCRF completion guidelines.</p>
+          <button class="more" type="button" aria-haspopup="dialog">See examples <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <div class="ex" hidden><ul>
+            <li><span class="tag lab">Labcorp</span><span>Contributes to protocol development and owns all study data management documentation through closeout.</span></li>
+            <li><span class="tag fh">Fred Hutch</span><span>Co-authored 15+ CDASH-compliant CRFs and designed 100+ edit checks, improving automated query efficiency by 35%.</span></li>
+            <li><span class="tag fh">Fred Hutch</span><span>Authored DMPs, DVPs and eCRF guidelines adopted site-wide; automated QC reports and listings shortened database lock by 2 weeks.</span></li>
+            <li><span class="tag asl">American Science Labs</span><span>Drafted eCRF Completion Guidelines and DMP sections later adopted program-wide.</span></li>
+          </ul></div>
         </div>
         <div class="card">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
           <h3>Standards &amp; compliance</h3>
           <p>CDISC (CDASH, SDTM), ICH-GCP, 21 CFR Part 11, TMF and FDA/EMA inspection readiness.</p>
+          <button class="more" type="button" aria-haspopup="dialog">See examples <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <div class="ex" hidden><ul>
+            <li><span class="tag fh">Fred Hutch</span><span>No critical findings across 3 FDA inspections, backed by ICH-GCP, CDISC/CDASH and 21 CFR Part 11 compliance.</span></li>
+            <li><span class="tag fh">Fred Hutch</span><span>Contributed to 12 SOPs and Work Instructions that passed 3 audits with zero findings; maintained TMF documentation and coordinated CRF translations into 8 languages.</span></li>
+            <li><span class="tag asl">American Science Labs</span><span>Performed SAE reconciliation and safety listing review with pharmacovigilance.</span></li>
+            <li><span class="tag cert">SCDM</span><span>Earned the Certified Clinical Data Manager (CCDM®) credential in 2025.</span></li>
+          </ul></div>
         </div>
         <div class="card">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
           <h3>Coding, reporting &amp; analytics</h3>
           <p>MedDRA and WHODrug coding; SAS, SQL, Tableau, J-Review; dashboards and KPI reporting.</p>
+          <button class="more" type="button" aria-haspopup="dialog">See examples <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <div class="ex" hidden><ul>
+            <li><span class="tag lab">Labcorp</span><span>Generates queries, dashboards and analytical reports that support medical and research teams.</span></li>
+            <li><span class="tag fh">Fred Hutch</span><span>Tracked DTS milestones with weekly metrics and KPIs for 100% on-time delivery, and built automated QC reports and data listings.</span></li>
+            <li><span class="tag asl">American Science Labs</span><span>Produced weekly query and cleanliness metrics to guide resourcing, and closed 1,000+ EDC queries at a 3-day median turnaround.</span></li>
+          </ul></div>
         </div>
         <div class="card">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.4 3.3-5.5 6.5-5.5s5.7 2.1 6.5 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14.6c2.4.3 4 2 4.5 4.9"/></svg></div>
           <h3>Vendor &amp; stakeholder leadership</h3>
           <p>Liaison for sponsors, CROs, labs and global sites; vendor oversight with KPIs; mentoring and training.</p>
+          <button class="more" type="button" aria-haspopup="dialog">See examples <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <div class="ex" hidden><ul>
+            <li><span class="tag lab">Labcorp</span><span>Operational data lead and key liaison between sponsors and laboratories, owning the query resolution process.</span></li>
+            <li><span class="tag fh">Fred Hutch</span><span>Directed oversight of 5 CROs and multiple data providers, and served as primary liaison to 20+ global sites.</span></li>
+            <li><span class="tag fh">Fred Hutch</span><span>Mentored 5 Clinical Data Coordinators and trained teams and vendors on DTS requirements; resolved 95% of escalated technical issues without vendor support.</span></li>
+            <li><span class="tag asl">American Science Labs</span><span>Partnered with CROs, CRAs and site coordinators from start-up through database lock, and trained sites and junior coordinators.</span></li>
+          </ul></div>
         </div>
       </div>
     </div>
@@ -426,11 +496,33 @@
   </div>
 </footer>
 
+<dialog class="ex-dlg" id="exDialog" aria-labelledby="exTitle">
+  <div class="dlg-in">
+    <div class="dlg-head">
+      <div class="ico dlg-ico" aria-hidden="true"></div>
+      <h3 id="exTitle"></h3>
+      <button class="x" type="button" aria-label="Close">&times;</button>
+    </div>
+    <p class="dlg-sub">Where I've applied this</p>
+    <div class="dlg-body"></div>
+  </div>
+</dialog>
+
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
   const nav = document.querySelector('header.nav');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  const dlg = document.getElementById('exDialog');
+  document.querySelectorAll('.card .more').forEach(btn => btn.addEventListener('click', () => {
+    const card = btn.closest('.card');
+    dlg.querySelector('.dlg-ico').innerHTML = card.querySelector('.ico').innerHTML;
+    dlg.querySelector('h3').textContent = card.querySelector('h3').textContent;
+    dlg.querySelector('.dlg-body').innerHTML = card.querySelector('.ex').innerHTML;
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+  }));
+  dlg.querySelector('.x').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
 </script>
 </body>
 </html>
